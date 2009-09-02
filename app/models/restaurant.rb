@@ -1,3 +1,5 @@
+require "monkey_patches/float"
+
 class Restaurant
   def initialize(address = "", name = "", rating = 0, reviews = [])
     @address, @name, @rating, @reviews = address, name, rating, reviews
@@ -32,12 +34,12 @@ class Restaurant
     "#{bus["address1"]}, #{bus["city"]}, #{bus["state"]} #{bus["zip"]}"
   end
   
-  def self.build_rating(reviews)
-    (reviews.inject(0.0){ |s, r| s += r["rating"] } / reviews.length)
+  def self.build_rating(revws)
+    (revws.inject(0.0){ |s, r| s += r["rating"] } / revws.length).round_to(2)
   end
 
-  def self.build_reviews(reviews)
-    reviews.inject([]){ |a, r| a << r["text_excerpt"] }
+  def self.build_reviews(revws)
+    revws.inject([]){ |a, r| a << r["text_excerpt"] }
   end
     
 end
