@@ -17,21 +17,9 @@ class Restaurant
     restaurants
   end
 
-  def to_xml(options = {})
-    builder = Builder::XmlMarkup.new(options)
-    builder.restaurant do |r|
-      r.address(@address)
-      r.name(@name)
-      r.rating(@rating)
-      r.reviews(@reviews)
-    end
-    builder
-  end
-
   private
 
   def self.call_yelp
-    return data
     client = Yelp::Client.new
     req = Yelp::Review::Request::Location.new(
       :zipcode => "32839",
