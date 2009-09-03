@@ -5,7 +5,11 @@ xml.restaurants do
       xml.address(restaurant.address)
       xml.name(restaurant.name)
       xml.rating(restaurant.rating)
-      xml.reviews(restaurant.reviews)
+      xml.reviews do
+        restaurant.reviews.each do |review|
+          xml.review(review)
+        end
+      end
     end
   end
 end
