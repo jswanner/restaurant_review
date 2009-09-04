@@ -37,7 +37,6 @@ class Restaurant
   end
 
   def self.call_yelp
-    return data
     client = Yelp::Client.new
     req = Yelp::Review::Request::Location.new(
       :zipcode => "32839",
