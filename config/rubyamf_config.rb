@@ -64,7 +64,7 @@ module RubyAMF
     # ClassMappings.register(:actionscript => 'Address', :ruby => 'Address', :type => 'active_record')
     # ClassMappings.register(:actionscript => 'User', :ruby => 'User', :type => 'active_record', :associations=> ["addresses", "credit_cards"], :methods => ["friends"])
 
-    ClassMappings.register(:actionscript => 'Restaurant', :ruby => 'Restaurant', :type => 'custom', :attributes => ['address', 'name'])
+    ClassMappings.register(:actionscript => 'Restaurant', :ruby => 'Restaurant', :type => 'custom')
 
     #
     # => Class Mapping Scope (Advanced Usage)
