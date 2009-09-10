@@ -21,21 +21,6 @@ class Restaurant
 
   private
 
-  def self.data
-    {
-      "businesses" => [{
-        "address1" => "123 maint st",
-        "city" => "Orlando",
-        "state" => "FL",
-        "zipcode" => "12345",
-        "reviews" => [{
-          "rating" => 3,
-          "text_excerpt" => "awesome place"
-        }]
-      }]
-    }
-  end
-
   def self.call_yelp
     client = Yelp::Client.new
     req = Yelp::Review::Request::Location.new(
