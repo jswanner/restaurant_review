@@ -7,7 +7,7 @@ class Restaurant
 
   attr_reader :address, :name, :rating, :reviews
 
-  def self.find_restaurants
+  def self.find_all
     resp = call_yelp
     restaurants = resp["businesses"].map do |bus|
       Restaurant.new(
