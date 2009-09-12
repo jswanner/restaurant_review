@@ -1,4 +1,4 @@
-Rails application used for ORUG / Adogo meeting on 10 Sept 2009
+Rails application used for [ORUG](http://www.orug.org/) / [Adogo](http://adogo.us/) meeting on 10 Sept 2009
 
 # Prerequisites
 Yelp Web Service ID, obtained here: [http://www.yelp.com/developers/](http://www.yelp.com/developers/)  
